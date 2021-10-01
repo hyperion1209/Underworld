@@ -5,10 +5,14 @@ alias g='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
 
-# Colorize grep output (good for log files)
+# Colorize output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias ls='ls --color=auto'
+
+alias cdw='cd ~/workplace'
+alias vim='nvim'
 
 # confirm before overwriting something
 alias cp="cp -i"
