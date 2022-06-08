@@ -47,3 +47,15 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
+
+# WD Vault
+alias vlogin='vault login -method=ldap -namespace="" username=marius.stan'
+
+# Terraform
+alias tfw='terraform workspace'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
+
+# Python testing
+alias bbt='make fmt && make test && coverage report -m'
+alias fix='git add -A && git commit -m "fix" && git rebase -i HEAD~2 && git push --force'
