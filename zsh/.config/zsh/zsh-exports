@@ -5,6 +5,7 @@ SAVEHIST=1000000
 export PATH="$HOME/.local/bin":$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
+export LC_ALL=C.UTF-8
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -16,12 +17,16 @@ if [ -d "$PYENV_ROOT" ]; then
   # Control will enter here if $DIRECTORY exists.
 fi
 
-export PIP_INDEX_URL=https://marius.stan:AP7VGnfpwuSuT2RFpKkHmHU7dLb@artifactory.workday.com/artifactory/api/pypi/python-virtual/simple
+export PIP_INDEX_URL=https://marius.stan:AP7VGnfpwuSuTAgmcsrqKLzLFxt@artifactory.workday.com/artifactory/api/pypi/python-virtual/simple
 
 # Node.js
 export NVM_DIR="/home/marius.stan/.nvm"
 export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist/
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# WD Vault
+export VAULT_ADDR="https://vault.inday.io"
+export VAULT_NAMESPACE="DevTest/Netauto"
 
 # export PATH=$HOME/.cargo/bin:$PATH
 # export PATH=$HOME/.local/share/go/bin:$PATH
