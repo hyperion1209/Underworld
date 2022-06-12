@@ -17,8 +17,6 @@ if [ -d "$PYENV_ROOT" ]; then
   # Control will enter here if $DIRECTORY exists.
 fi
 
-export PIP_INDEX_URL=https://marius.stan:AP7VGnfpwuSuTAgmcsrqKLzLFxt@artifactory.workday.com/artifactory/api/pypi/python-virtual/simple
-
 # Node.js
 export NVM_DIR="/home/marius.stan/.nvm"
 export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist/
