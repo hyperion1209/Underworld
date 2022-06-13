@@ -69,3 +69,6 @@ keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- TODO: Add toggleterm mapping for python interpreter
+
+-- Formatting
+keymap("n", "<leader>f", ":Format<cr>", opts)
