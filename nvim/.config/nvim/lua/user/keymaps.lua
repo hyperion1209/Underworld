@@ -61,6 +61,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- TODO: Add key mapping for comments
 -- TODO: Add key mapping for git signs: prev/next hulk, git blame, etc
 
+-- Telescope
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
+
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
