@@ -67,6 +67,8 @@ return packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use "folke/which-key.nvim"
   use "ahmedkhalf/project.nvim"
+  use "goolord/alpha-nvim"
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
