@@ -66,6 +66,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use 'nvim-lualine/lualine.nvim'
   use "folke/which-key.nvim"
+  use "ahmedkhalf/project.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
