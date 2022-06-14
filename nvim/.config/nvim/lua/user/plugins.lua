@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+  use 'nvim-lualine/lualine.nvim'
   use "folke/which-key.nvim"
 
   -- snippets
