@@ -76,13 +76,6 @@ compinit
 autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
-# TODO Remove these
-setxkbmap -option caps:escape
-xset r rate 210 40
-
-# Speedy keys
-xset r rate 210 40
-
 # Environment variables set everywhere
 export EDITOR="nvim"
 # export TERMINAL="alacritty"
