@@ -53,7 +53,8 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Colorschemes
-  use "LunarVim/darkplus.nvim"
+  use "lunarvim/darkplus.nvim"
+  use "gruvbox-community/gruvbox"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

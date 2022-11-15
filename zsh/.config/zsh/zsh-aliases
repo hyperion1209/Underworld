@@ -58,4 +58,4 @@ alias tfa='terraform apply'
 
 # Python testing
 alias bbt='make fmt && make test && coverage report -m'
-alias fix='git add -A && git commit -m "fix" && git rebase -i HEAD~2 && git push --force'
+alias fix='git commit -a --amend --no-edit && git push --force origin'
