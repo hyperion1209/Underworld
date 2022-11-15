@@ -21,9 +21,6 @@ export NVM_DIR="/home/marius.stan/.nvm"
 export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist/
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# WD Vault
-export VAULT_ADDR="https://vault.inday.io"
-export VAULT_NAMESPACE="DevTest/Netauto"
 
 # export PATH=$HOME/.cargo/bin:$PATH
 # export PATH=$HOME/.local/share/go/bin:$PATH
