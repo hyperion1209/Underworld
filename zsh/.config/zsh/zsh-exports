@@ -21,9 +21,9 @@ export NVM_DIR="/home/marius.stan/.nvm"
 export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist/
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-
+# Language server
+export PATH=$HOME/.local/share/nvim:$PATH
 # export PATH=$HOME/.cargo/bin:$PATH
-# export PATH=$HOME/.local/share/go/bin:$PATH
 # export GOPATH=$HOME/.local/share/go
 # export PATH=$HOME/.fnm:$PATH
 # eval "$(fnm env)"
