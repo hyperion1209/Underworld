@@ -145,25 +145,25 @@ cursor:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: monospace
+    family: Hack Nerd Font Mono
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: monospace
+    family: Hack Nerd Font Mono
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: monospace
+    family: Hack Nerd Font Mono
     # Style can be specified to pick a specific face.
     style: Italic
 
   # The bold italic font face
   bold_italic:
-    family: monospace
+    family: Hack Nerd Font Mono
     # Style can be specified to pick a specific face.
     style: Bold Italic
 

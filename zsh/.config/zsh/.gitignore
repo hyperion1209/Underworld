@@ -1,3 +1,4 @@
 .zcompdump
 plugins/
 zsh-wd-exports
+zsh-mac-exports
