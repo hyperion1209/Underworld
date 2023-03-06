@@ -35,6 +35,7 @@ source "$ZDOTDIR/zsh-functions"
 # Normal files to source
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-wd-exports"
+zsh_add_file "zsh-mac-exports"
 zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
