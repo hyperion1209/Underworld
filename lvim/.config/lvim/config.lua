@@ -19,6 +19,12 @@ vim.opt.wrap = true
 vim.opt.foldmethod = "expr"                     -- folding set to "expr" for treesitter based folding
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
 
+-- disable inline diagnostics text
+lvim.lsp.diagnostics.virtual_text = false
+lvim.autocommands.custom_groups = {
+  { "CursorHold", "*", "lua vim.lsp.diagnostic.show_line_diagnostics({ show_header = false, border = 'single' })" },
+}
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
