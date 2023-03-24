@@ -10,13 +10,13 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = true
+lvim.format_on_save.enabled = false
 lvim.colorscheme = "lunar"
 lvim.transparent_window = false
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 vim.opt.wrap = true
-vim.opt.foldmethod = "expr" -- folding set to "expr" for treesitter based folding
+vim.opt.foldmethod = "expr"                     -- folding set to "expr" for treesitter based folding
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -81,6 +81,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "lua",
   "python",
   "typescript",
+  "html",
   "tsx",
   "css",
   "rust",
@@ -95,10 +96,14 @@ lvim.builtin.treesitter.highlight.enable = true
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
--- lvim.lsp.installer.setup.ensure_installed = {
---     "sumneko_lua",
---     "jsonls",
--- }
+lvim.lsp.installer.setup.ensure_installed = {
+  "sumneko_lua",
+  "jsonls",
+  "html",
+  "tailwindcss",
+  "tsserver",
+  "pyright",
+}
 -- -- change UI setting of `LspInstallInfo`
 -- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
 -- lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = false
@@ -109,13 +114,13 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 -- ---@usage disable automatic installation of servers
-lvim.lsp.installer.setup.automatic_installation = false
+lvim.lsp.installer.setup.automatic_installation = true
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
--- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pyright", opts)
+local opts = { filetypes = { "html", "htmldjango" } } -- check the lspconfig documentation for a list of all possible options
+require("lvim.lsp.manager").setup("html", opts)
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
 -- ---`:LvimInfo` lists which server(s) are skipped for the current filetype
@@ -137,7 +142,19 @@ lvim.lsp.installer.setup.automatic_installation = false
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "isort", filetypes = { "python" } },
-  { command = "black", filetypes = { "python" }, extra_args = { "--line-length", "80" } },
+  {
+    command = "black",
+    filetypes = { "python" },
+    extra_args = {
+      "--line-length", "80" }
+  },
+  {
+    command = "prettier",
+    filetypes = { "typescript", "typescriptreact", "css", "javascript", "html", "htmldjango" },
+    extra_args = {
+      "--print-with", "100" }
+  },
+  -- { command = "yamlfmt", filetypes = { "yaml" } },
   --   {
   --     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
   --     command = "prettier",
@@ -153,6 +170,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   { command = "flake8", filetypes = { "python" } },
+  -- { command = "yamllint", filetypes = { "yaml" } },
   --   {
   --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
   --     command = "shellcheck",
