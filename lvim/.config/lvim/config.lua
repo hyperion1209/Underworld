@@ -209,6 +209,7 @@ lvim.plugins = {
     "mfussenegger/nvim-dap-python",
     "nvim-neotest/neotest",
     "nvim-neotest/neotest-python",
+    "christoomey/vim-tmux-navigator"
     },
 }
 
