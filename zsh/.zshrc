@@ -7,3 +7,5 @@ complete -o nospace -C /usr/bin/terraform terraform
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
